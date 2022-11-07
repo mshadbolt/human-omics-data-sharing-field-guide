@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Controlled access database for human data.">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="Human 'Omics Data Sharing Field Guide" />
+    <meta property="og:description" content="Guide to all things human 'omics data sharing in Australia." />
+    <meta property="og:image" content="//mshadbolt.github.io/human-omics-data-sharing-field-guide/assets/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Human 'Omics Data Sharing Field Guide">
+    <meta name="msapplication-TileColor" content="#">
+    <meta name="theme-color" content="#">
+    <title>Data repositories: EGA | Human 'Omics Data Sharing Field Guide</title>
+    <!-- Syntax highlighting  -->
+    <link rel="stylesheet" href="/human-omics-data-sharing-field-guide/assets/css/syntax.css">
+    <!-- Country flags  -->
+    <link rel="stylesheet" href="/human-omics-data-sharing-field-guide/assets/css/flag-icon.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="/human-omics-data-sharing-field-guide/assets/css/all.min.css">
+    <!-- Main css file -->
+    <link rel="stylesheet" href="/human-omics-data-sharing-field-guide/assets/css/main.css">
+    <!-- Main font(s) -->
+    <!-- JavaScript  -->
+    <script src="/human-omics-data-sharing-field-guide/assets/js/jquery.min.js"></script>
+    <script src="/human-omics-data-sharing-field-guide/assets/js/lunr.min.js"></script>
+    <script src="/human-omics-data-sharing-field-guide/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/human-omics-data-sharing-field-guide/assets/js/anchor.min.js"></script>
+    <script src="/human-omics-data-sharing-field-guide/assets/js/toc.js"></script>
+    <script src="/human-omics-data-sharing-field-guide/assets/js/jquery.navgoco.js"></script>
+    <script src="/human-omics-data-sharing-field-guide/assets/js/main.js"></script>
+    <script src="/human-omics-data-sharing-field-guide/assets/js/search.js"></script>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/human-omics-data-sharing-field-guide/assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/human-omics-data-sharing-field-guide/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/human-omics-data-sharing-field-guide/assets/img/favicon-16x16.png">
+    <link rel="manifest" href="/human-omics-data-sharing-field-guide/assets/img/site.webmanifest">
+    <link rel="mask-icon" href="/human-omics-data-sharing-field-guide/assets/img/safari-pinned-tab.svg" color="#">
+    <link rel="shortcut icon" href="/human-omics-data-sharing-field-guide/assets/img/favicon.ico">
+    <!-- Schema.org metadata -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Human 'Omics Data Sharing Field Guide",
+        "url": "https://mshadbolt.github.io",
+        "about": "Guide to all things human 'omics data sharing in Australia.",
+        "author": [
+            {
+                "@type": "Person",
+                "@id": "https://orcid.org/0000-0001-7505-5418",
+                "mainEntityOfPage": "https://orcid.org/0000-0001-7505-5418",
+                "affiliation": {
+                    "@type": "Organization",
+                    "name": "Australian BioCommons / University of Melbourne"
+                },
+                "email": "marion@biocommons.org.au",
+                "url": "https://github.com/mshadbolt",
+                "image": "https://avatars.githubusercontent.com/mshadbolt",
+                "jobTitle": "editor",
+                "name": "Marion Shadbolt"
+            }
+        ]
+    }
+</script>
+
+</head>
+
+<body>
+    <!-- Navigation -->
+<header>
+    <a class="visually-hidden-focusable" href='#main'>Skip to content</a>
+    <a class="visually-hidden-focusable" href='#footer'>Skip to footer</a>
+    <nav class="navbar navbar-light navbar-expand-lg mb-3 mb-lg-5">
+        <div class="container">
+            <a class="navbar-brand" href="/human-omics-data-sharing-field-guide/"><img class="me-3 img-fluid" alt="Human 'Omics Data Sharing Field Guide logo" src="/human-omics-data-sharing-field-guide/assets/img/main_logo.svg"><span class="me-0 me-lg-3">Human 'Omics Data Sharing Field Guide</span></a>
+            <button class="navbar-toggler text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <i title="navbar-toggler" class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                <ul class="navbar-nav">
+                    <!-- navigation entries -->
+                    <li class="nav-item ms-0 ms-lg-3 mt-2 mt-lg-0">
+                        <a class="nav-link ps-2" href="/human-omics-data-sharing-field-guide/index">Home</a>
+                    </li>
+                    <li class="nav-item ms-0 ms-lg-3 mt-2 mt-lg-0">
+                        <a class="nav-link ps-2" href="/human-omics-data-sharing-field-guide/about">About</a>
+                    </li><li class="nav-item ms-0 ms-lg-3 mt-2 mt-lg-0 nav-break bg-dark opacity-25"></li>
+                    <li class="nav-item ms-0 ms-lg-3 mt-2 mt-lg-0">
+                        <a class="nav-link ps-2 d-flex align-items-center" href="https://github.com/mshadbolt/human-omics-data-sharing-field-guide"><i class="fa-brands fa-github me-2"></i>GitHub</a>
+                    </li>
+                    <!--start search-->
+                    <li class="nav-item ms-0 ms-lg-3 my-2 my-lg-0">
+                        <div class="position-relative">
+                            <form role="search" class="input-group">
+                                <span class="input-group-text" id="search-label"><i class="fa-solid fa-magnifying-glass"></i></span><input type="search" id="search-input" class="search-input form-control" tabindex="0" placeholder="Search Human 'Omics Data Sharing Field Guide" aria-label="Search Human 'Omics Data Sharing Field Guide" autocomplete="off">
+                            </form>
+                            <div id="search-results" class="search-results"></div>
+                        </div>
+                    </li>
+                    <!--end search-->
+                </ul>
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+</header>
+
+    <!-- Page Content -->
+    <div class="container min-vh-100">
+        <!-- Content Row -->
+        <div class="row gx-0 gx-lg-5">
+            <!-- Sidebar Column -->
+            <div class="col-lg-3">
+                <button class="btn text-start d-lg-none collapsed sidebar-collapse w-100 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#side-nav" aria-controls="side-nav" aria-expanded="true" aria-label="Toggle navigation">
+    Main menu <i title="navbar-toggler" class="fa-solid fa-bars ms-2"></i>
+</button>
+<nav class="collapse" id="side-nav" aria-label="Side navigation">
+    <a class="btn hover-primary text-start d-block mb-1 sidebar-title" href="/human-omics-data-sharing-field-guide/index">Main </a>
+    <ul class="list-unstyled mb-4 mb-lg-0">
+        <li>    
+            <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/data_standards">Data Standards</a>
+            <ul class="list-unstyled">
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/ga4gh">GA4GH</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/fhir">FHIR</a>
+                </li>
+            </ul>
+        </li>
+        <li>    
+            <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/legal_ethical">Legal and Ethical Considerations</a>
+            <ul class="list-unstyled">
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/australian_legal">Australian Legal Landscape</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/national_statement_ethical_conduct">National Statement for Ethical Conduct in Human Research</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/consent">Consent</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/privacy_act">The Privacy Act 1988</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/hrecs">Human Research Ethics Committees(HRECs)</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/gdpr">GDPR</a>
+                </li>
+            </ul>
+        </li>
+        <li>    
+            <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/major_genome_projects">Major Genome Projects</a>
+        </li>
+        <li>    
+            <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/support_agencies">Support Agencies</a>
+        </li>
+        <li>    
+            <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/data_repositories">Data repositories</a>
+            <ul class="list-unstyled">
+                <li class="active">    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/ega">EGA</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/dbgap">dbGAP</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/jga">JGA</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/gsa_human">GSA-Human</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/agdr">Australian Genomics Data repository</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/arrayexpress">ArrayExpress</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/expression_atlas">Expression Atlas</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/geo">Gene Expression Omnibus</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/biosample">BioSample</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/biostudies">BioStudies</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/bioproject">BioProject</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/hca">Human Cell Atlas</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/omicsdi">Omics Discovery Index</a>
+                </li>
+            </ul>
+        </li>
+        <li>    
+            <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/other_repositories">Other repositories</a>
+        </li>
+    </ul>
+    <script>$("li.active").parents('li').toggleClass("active parent");</script>
+</nav>
+
+            </div>
+            <!-- Content Column -->
+            <div class="col-lg-9">
+                <main id="main" class="mb-5">
+    <h1 class="has-subtitle"><span class="d-block text-secondary fs-4 ff-body">Data repositories</span><span class="visually-hidden">:</span> EGA
+    
+<div id="edit-me" class="btn-group">
+    <a role="button" data-bs-toggle="tooltip" title="Propose changes to this page on GitHub"  href="https://github.com/mshadbolt/human-omics-data-sharing-field-guide/blob/main/pages/data_repositories/ega.md" class="btn btn-sm hover-primary text-primary"><i class="fa-solid fa-pencil-alt"></i></a>
+    <a role="button" data-bs-toggle="tooltip" title="Report an issue" href="https://github.com/mshadbolt/human-omics-data-sharing-field-guide/issues/new?title=Issue+on+page%3A+EGA&amp;body=I+would+like+to+report+an+issue+on+the+EGA+page+at+%60%2Fega%60.+Description+of+the+issue%3A" class="btn btn-sm hover-primary text-primary"><i class="fa-solid fa-exclamation"></i></a>
+</div>
+
+    </h1><script>
+  $(document).ready(function () {
+    $('#toc').toc({ minimumHeaders: 2, listType: 'ul', noBackToTopLinks: true, showSpeed: 0, headers: 'h2, h3' , title: '', classes:{toc:'p-3 rounded my-4'} });
+  });
+</script>
+<div class="col-12 col-sm-7 col-xl-5">
+  <div id="toc"></div>
+</div>
+
+    <p>The European Genome-Phenome Archive (EGA) <a class="citation" href="#freeberg_european_2022">(Freeberg et al., 2022)</a> is a controlled access data repository for sensitive human data. The repository is managed by EMBL-EBI (UK) and the Centre for Genomic Regulation (CRG) (Spain). Submission is open to anyone and data access is controlled per dataset by a user submitted data access policy and user defined data access committee. A single data access committee and policy may be used for a single dataset or may be reused for multiple datasets.</p>
+
+<h2 id="ega-submission-process">EGA Submission process</h2>
+
+<p>The EGA submission process can be challenging to those unfamiliar to it, so the following sections provide an overview as well as some tips and tricks that may help you along the way. The first step is to gain an EGA submission account, which can be done by completing the <a href="https://ega-archive.org/submission-form.php">submission account form</a>.</p>
+
+<h3 id="ega-metadata">EGA Metadata</h3>
+
+<p>The metadata files that must be submitted to EGA follow the same INSDC schemas, with the addition of policy, dataset and dac objects. These allow for the administration aspects related to controlled access of data and allow for finer grained access to datasets within a study. All information submitted in these XML files is considered public access and can be queried via the EGA API once the study is available in the platform. The required attributes that must be included about each sample are:</p>
+
+<ul>
+  <li>Donor ID - anonymised individual identifier</li>
+  <li>Biological sex (referred to as gender)</li>
+  <li>Phenotype - preferably ontologised using <a href="https://www.ebi.ac.uk/ols/ontologies/efo">EFO</a></li>
+</ul>
+
+<p>Submitters can add as many other attributes as they like, but this information will be openly accessible when the study is submitted. It is also possible to first submit attributes to the BioSamples database first and use the obtained accessions in your EGA submission to link to BioSamples. These would also only be for public metadata.</p>
+
+<p>Due to limited required attributes, it is often necessary to make more comprehensive clinical, phenotypic and demographic metadata available alongside the data files. If this metadata is subject to controlled access, the information can be attached to the submission as Analysis (phenotype) files. These do not follow any kind of strict standard or format, however the use of the <a href="https://phenopacket-schema.readthedocs.io/en/latest/">GA4GH phenopacket</a> is an emerging standard for characterising this type of information. README files can also be incorporated to provide an explanation of the phenotype or other analysis files.</p>
+
+<p>Submitting to the EGA can be done via its submission interface or through submitting XMLs or JSONs via their REST API. The submission interface is useful for a user-friendly experience when submitting metadata for objects where there are relatively few objects of that type. We recommend using it for objects such as:</p>
+
+<ul>
+  <li>Study</li>
+  <li>DAC</li>
+  <li>Policy</li>
+  <li>Experiment</li>
+</ul>
+
+<p>For objects with a high cardinality, such as Samples, Runs and Analyses, using the CSV templates that are available through the submission portal or creating XML documents and submitting via API is more efficient.</p>
+
+<p>However, it is possible to create a fully automated submission process that contains all metadata required by creating XML documents.</p>
+
+<p>Submission notes:</p>
+
+<div class="alert alert-danger" role="alert"><i class="fa-solid fa-exclamation-circle"></i> <b>Warning:</b> When preparing a submission, it is important to validate and check all the details because editing after submission is not possible without going through the helpdesk. Submission to the test instance of the EGA is recommended before making your final submission.</div>
+
+<div class="alert alert-success" role="alert"><i class="fa-solid fa-check-square"></i> <b>Tip:</b> Use recognisable values for the aliases. The <strong>alias</strong> field that is set for each object is not strictly required, if not specified one will be provided. BUT the alias is what you used to link between the different objects so it is useful to set to names that you can recognise to facilitate the linking that is required in your submission. Aliases must be unique across all items within a submission account.</div>
+
+<div class="alert alert-warning" role="alert"><i class="fa-solid fa-exclamation-triangle"></i> <b>Important:</b> All data files that are referred to by ‘run’ or ‘analysis’ objects must be placed in the submission box and indexed by the system before it will allow submission of those object XMLs.</div>
+
+<div class="alert alert-info" role="alert"><i class="fa-solid fa-info-circle"></i> <b>Note:</b> For objects that are linked by their accessions i.e. policy, dataset, the objects they refer to must be submitted and assigned accessions by the EGA before they can be linked.</div>
+
+<p>Table: Detailed information about ega objects and tips on creating XMLs for each object. Adapted from <a href="https://www.zotero.org/google-docs/?5otJgj">(Band 2019; EGA n.d.)</a></p>
+
+<p>Table to be reformatted and placed here.</p>
+
+<figure class="my-4 " style="max-width:10">
+    <img src="/human-omics-data-sharing-field-guide/images//repositories/EGA-Metadata-Model.png" alt="EGA Metadata Model Diagram" class="figure-img img-fluid rounded" />
+    <figcaption class="figure-caption">
+    <p>Figure 1. Graphical representation of EGA Metadata Model to represent a sequencing experiment with some recommended fields specified based on EGA example xmls. For comprehensive detail of available fields, see the XML schemas.</p>
+
+    </figcaption>
+</figure>
+
+<p><a href="https://australianbiocommons.github.io/human-omics-data-sharing-field-guide/images//repositories/EGA-Metadata-Model.png">View full size image</a></p>
+
+<h4 id="resources">Resources:</h4>
+
+<ul>
+  <li>
+    <p>Set of example XMLs created by EGA: <a href="https://ega-archive.org/submission/sequence/programmatic_submissions/prepare_xml">https://ega-archive.org/submission/sequence/programmatic_submissions/prepare_xml</a></p>
+  </li>
+  <li>
+    <p>A somewhat tongue-in-cheek but potentially useful 4 part run through of one user’s experience with how to submit to EGA, mostly programmatically:</p>
+  </li>
+</ul>
+
+<p><a href="https://gavinband.github.io/bioinformatics/data/2019/05/01/Me_versus_the_European_Genome_Phenome_Archive.html">https://gavinband.github.io/bioinformatics/data/2019/05/01/Me_versus_the_European_Genome_Phenome_Archive.html</a></p>
+
+<ul>
+  <li>Example of automated data flow to EGA from QIMRB. This transforms their internally stored metadata into the XMLs required for an EGA submission: <a href="https://github.com/delocalizer/ega_metadata">https://github.com/delocalizer/ega_metadata</a></li>
+</ul>
+
+<h3 id="ega-data-files">EGA Data Files</h3>
+
+<p>All files that will be referenced from the Run or Analysis objects must be encrypted before they are transferred to the EGA servers. Encryption is done by using the <a href="https://ega-archive.org/submission/tools/egacryptor">EGAcryptor</a> software and you need the <a href="https://ega-archive.org/files/submission_2020_public.gpg.asc">public key</a> provided by EGA. The files must be checksummed both before and after encryption, and the checksums as well as the method used must be incorporated into the metadata files. File can be transferred using Aspera (faster) or FTP. They don’t generally allow for more than 10TB of data to be uploaded to a submission box at a time, but this can be negotiated with the helpdesk if a higher limit is needed.</p>
+
+<div class="alert alert-danger" role="alert"><i class="fa-solid fa-exclamation-circle"></i> <b>Warning:</b> Ensure that any potentially identifiable information is take out of any data files, such as information in BAM headers</div>
+
+<div class="alert alert-info" role="alert"><i class="fa-solid fa-info-circle"></i> <b>Note:</b> Once files are uploaded, it takes time for them to be indexed and recognised as present within the submission box. Submission of file-related metadata won’t be possible until the EGA system recognises the files are in the submission box.</div>
+
+<div class="alert alert-success" role="alert"><i class="fa-solid fa-check-square"></i> <b>Tip:</b> File names should be kept in a simple flat structure when uploading and ideally shouldn’t change names as changes in names may take up to 24 hours to change.</div>
+
+<div class="alert alert-success" role="alert"><i class="fa-solid fa-check-square"></i> <b>Tip:</b> There may be limits on the bandwidth of data that can be uploaded to a submission box but this is unknown. Be prepared for timeouts, dropouts and don’t over burden with lots of parallelisation.</div>
+
+<div class="alert alert-info" role="alert"><i class="fa-solid fa-info-circle"></i> <b>Note:</b> The transfer process can be very slow from Australia-&gt;Europe</div>
+
+<div class="alert alert-warning" role="alert"><i class="fa-solid fa-exclamation-triangle"></i> <b>Important:</b> It is expected that you will complete your submission, including metadata from the entire experiment, within 60 days of uploading files to a submission box, and files will be deleted after 90 days. So don’t upload files unless you are ready to complete your submission.</div>
+
+<h4 id="resources-1">Resources:</h4>
+
+<p>EGA file upload documentation: <a href="https://ega-archive.org/submission/tools/ftp-aspera">https://ega-archive.org/submission/tools/ftp-aspera</a></p>
+
+<p>Automated encryption and submission of data files from an Amazon S3 bucket to EGA submission box using Aspera, created by UMCCR: <a href="https://github.com/umccr/ega-submit">https://github.com/umccr/ega-submit</a></p>
+
+<p>Walk through process: <a href="https://github.com/QingliGuo/EGA_Data_submission">https://github.com/QingliGuo/EGA_Data_submission</a></p>
+
+<p>Specific software for ICGC members but may be useful/adaptable for other submitters: <a href="https://github.com/icgc-dcc/egasub">https://github.com/icgc-dcc/egasub</a> (not actively maintained)</p>
+
+<h2 id="ega-access-process">EGA Access Process</h2>
+
+<p>Once a dataset of interest is found, a user must apply directly to the data access committee that controls the dataset. There may be different requirements around what information is required to be submitted to apply for access. Any dataset use must comply with the data access policy that is attached to the dataset.</p>
+
+<p>Data access committees will follow their own processes to assess the application, and if approved, contact the EGA to inform them of their decision. Access is then given to a particular EGA account to download the data from their system. The EGA provides a command line program to facilitate downloading of files from the EGA - <a href="https://github.com/EGA-archive/ega-download-client">EGA Download Client</a>.</p>
+
+<p>Download files of interest, can be a subset, particular files/runs/samples? Demonstrate how to use XMLs to subset data and download files/samples of interest.</p>
+
+<p><a href="https://ega-archive.org/download/downloader-quickguide-APIv3">https://ega-archive.org/download/downloader-quickguide-APIv3</a></p>
+
+<p><a href="https://github.com/EGA-archive/ega-download-client">https://github.com/EGA-archive/ega-download-client</a></p>
+
+<p>Unencrypt files using provided key</p>
+
+<p><a href="https://ega-archive.org/access/data-access">https://ega-archive.org/access/data-access</a></p>
+
+<h4 id="resources-2">Resources:</h4>
+
+<p>EGA data access guide: <a href="https://ega-archive.org/access/data-access">https://ega-archive.org/access/data-access</a></p>
+
+<h2 id="federated-ega">Federated EGA</h2>
+
+<p>There are currently federated EGA nodes being set up in other countries in Europe such as Finland, Sweden, Germany and Spain. The main driver for this has been to allow for data to remain within the country it is generated.</p>
+
+<p>As part of the <a href="https://www.biocommons.org.au/hgpp">Human Genomes Platform Project</a>, leading Australian institutes are looking into the feasibility of setting up a federated node in Australia.</p>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"><li><span id="freeberg_european_2022">Freeberg, M. A., Fromont, L. A., D’Altri, T., Romero, A. F., Ciges, J. I., Jene, A., Kerry, G., Moldes, M., Ariosa, R., Bahena, S., Barrowdale, D., Barbero, M. C., Fernandez-Orth, D., Garcia-Linares, C., Garcia-Rios, E., Haziza, F., Juhasz, B., Llobet, O. M., Milla, G., … Rambla, J. (2022). The European Genome-phenome Archive in 2021. <i>Nucleic Acids Research</i>, <i>50</i>(D1), D980–D987. https://doi.org/10.1093/nar/gkab1059</span>
+
+
+<a href="http://dx.doi.org/10.1093/nar/gkab1059" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+</li></ol>
+
+    
+    
+
+    
+
+    
+<span class="d-block h2-like fs-2">Contributors</span>
+<div class="p-4 rounded mt-4 page-contributors">
+    <a tabindex="0" role="button" class="btn btn-sm contributor-link hover-primary m-1 position-relative" data-bs-html="true" data-bs-trigger="focus" data-bs-container="body" data-bs-template='<div class="popover shadow border-0 contributor-cards" role="tooltip"><div class="popover-body p-0"></div></div>' data-bs-toggle="popover" data-bs-placement="top" data-bs-content='
+    <div class="card">
+        <div class="position-relative d-flex justify-content-center">
+          <img src="https://avatars.githubusercontent.com/mshadbolt" class="card-img-top p-3 rounded-circle contributor-img" alt="Marion Shadbolt">
+          <span class="badge position-absolute top-0 end-0">Editor</span>
+        </div>
+        <div class="card-body text-center py-0">
+          <p class="card-title">Marion Shadbolt</p>
+          <p class="card-affiliation">Australian BioCommons / University of Melbourne</p>
+        </div>
+        <div class="card-footer">
+          <div class="d-flex justify-content-center">
+            <div class="mx-1"><a class="btn bg-white text-primary hover-primary rounded-circle social-icons p-0" href="https://github.com/mshadbolt"><i class="fa-brands fa-github"></i></a></div>
+            <div class="mx-1"><a class="btn bg-white text-primary hover-primary rounded-circle social-icons p-0" href="mailto:marion@biocommons.org.au"><i class="fa-solid fa-envelope"></i></a></div>
+            <div class="mx-1"><a class="btn bg-white text-primary hover-primary rounded-circle social-icons p-0" href="https://orcid.org/0000-0001-7505-5418"><i class="fa-brands fa-orcid"></i></a></div>
+          </div>
+        </div>
+      </div>'>
+        <div class="d-flex align-items-center">
+            <div class="flex-shrink-0">
+                <img class="img-fluid rounded-circle contributor-img-sm" src="https://avatars.githubusercontent.com/mshadbolt" alt="Avatar of the contributor Marion Shadbolt">
+            </div>
+            <div class="flex-grow-1 ms-2">
+                Marion Shadbolt
+            </div>
+        </div>
+    </a>
+</div>
+
+</main>
+
+
+            </div>
+        </div>
+    </div>
+    <button id="back-to-top" class="btn btn-primary" type="button" aria-hidden="true" onclick="topFunction()">
+        <i class="fa-solid fa-arrow-up"></i><span class="ms-2 d-none d-sm-inline">Back to top</span>
+    </button>
+    <footer id="footer">
+    <div class="container py-1 py-4">
+        <div class="row g-4 d-flex justify-content-between">
+            <div class="col-lg-2 col-sm-6 d-flex justify-content-center">
+                <img class="my-auto" width="88px" src="/human-omics-data-sharing-field-guide/assets/img/main_logo.png" alt="Australian BioCommons Logo" />
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <ul class="mb-0">
+                    <li><a href="/human-omics-data-sharing-field-guide/">Home</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="text-center pt-4 mb-0">
+                <p>Icons used on this page from <a href="https://thenounproject.com/">The Noun Project</a> see <a href="/acknowledgements">Acknowledgements</a> for more info.</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="copyright text-center p-4">
+        <p>The content of this website is licensed under <a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="Creative Commons License" /></a>. The <a href="https://www.biocommons.org.au/">Australian BioCommons</a> is supported by <a href="https://www.bioplatforms.com/">Bioplatforms Australia</a>. Bioplatforms Australia is enabled by <a href="https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris">NCRIS</a>.  <a href="https://www.biocommons.org.au/privacy">Privacy</a>. <a href="https://www.biocommons.org.au/cookies">Cookies</a></p>
+
+    </div>
+</footer>
+
+    
+
+</body>
+</html>

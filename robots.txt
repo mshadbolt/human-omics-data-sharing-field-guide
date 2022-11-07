@@ -1,0 +1,1 @@
+Sitemap: https://mshadbolt.github.io/human-omics-data-sharing-field-guide/sitemap.xml

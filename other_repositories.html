@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Guide to all things human 'omics data sharing in Australia.">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="Human 'Omics Data Sharing Field Guide" />
+    <meta property="og:description" content="Guide to all things human 'omics data sharing in Australia." />
+    <meta property="og:image" content="//mshadbolt.github.io/human-omics-data-sharing-field-guide/assets/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Human 'Omics Data Sharing Field Guide">
+    <meta name="msapplication-TileColor" content="#">
+    <meta name="theme-color" content="#">
+    <title>Other repositories | Human 'Omics Data Sharing Field Guide</title>
+    <!-- Syntax highlighting  -->
+    <link rel="stylesheet" href="/human-omics-data-sharing-field-guide/assets/css/syntax.css">
+    <!-- Country flags  -->
+    <link rel="stylesheet" href="/human-omics-data-sharing-field-guide/assets/css/flag-icon.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="/human-omics-data-sharing-field-guide/assets/css/all.min.css">
+    <!-- Main css file -->
+    <link rel="stylesheet" href="/human-omics-data-sharing-field-guide/assets/css/main.css">
+    <!-- Main font(s) -->
+    <!-- JavaScript  -->
+    <script src="/human-omics-data-sharing-field-guide/assets/js/jquery.min.js"></script>
+    <script src="/human-omics-data-sharing-field-guide/assets/js/lunr.min.js"></script>
+    <script src="/human-omics-data-sharing-field-guide/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/human-omics-data-sharing-field-guide/assets/js/anchor.min.js"></script>
+    <script src="/human-omics-data-sharing-field-guide/assets/js/toc.js"></script>
+    <script src="/human-omics-data-sharing-field-guide/assets/js/jquery.navgoco.js"></script>
+    <script src="/human-omics-data-sharing-field-guide/assets/js/main.js"></script>
+    <script src="/human-omics-data-sharing-field-guide/assets/js/search.js"></script>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/human-omics-data-sharing-field-guide/assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/human-omics-data-sharing-field-guide/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/human-omics-data-sharing-field-guide/assets/img/favicon-16x16.png">
+    <link rel="manifest" href="/human-omics-data-sharing-field-guide/assets/img/site.webmanifest">
+    <link rel="mask-icon" href="/human-omics-data-sharing-field-guide/assets/img/safari-pinned-tab.svg" color="#">
+    <link rel="shortcut icon" href="/human-omics-data-sharing-field-guide/assets/img/favicon.ico">
+    <!-- Schema.org metadata -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Human 'Omics Data Sharing Field Guide",
+        "url": "https://mshadbolt.github.io",
+        "about": "Guide to all things human 'omics data sharing in Australia.",
+        "author": [
+            {
+                "@type": "Person",
+                "@id": "https://orcid.org/0000-0001-7505-5418",
+                "mainEntityOfPage": "https://orcid.org/0000-0001-7505-5418",
+                "affiliation": {
+                    "@type": "Organization",
+                    "name": "Australian BioCommons / University of Melbourne"
+                },
+                "email": "marion@biocommons.org.au",
+                "url": "https://github.com/mshadbolt",
+                "image": "https://avatars.githubusercontent.com/mshadbolt",
+                "jobTitle": "editor",
+                "name": "Marion Shadbolt"
+            }
+        ]
+    }
+</script>
+
+</head>
+
+<body>
+    <!-- Navigation -->
+<header>
+    <a class="visually-hidden-focusable" href='#main'>Skip to content</a>
+    <a class="visually-hidden-focusable" href='#footer'>Skip to footer</a>
+    <nav class="navbar navbar-light navbar-expand-lg mb-3 mb-lg-5">
+        <div class="container">
+            <a class="navbar-brand" href="/human-omics-data-sharing-field-guide/"><img class="me-3 img-fluid" alt="Human 'Omics Data Sharing Field Guide logo" src="/human-omics-data-sharing-field-guide/assets/img/main_logo.svg"><span class="me-0 me-lg-3">Human 'Omics Data Sharing Field Guide</span></a>
+            <button class="navbar-toggler text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <i title="navbar-toggler" class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                <ul class="navbar-nav">
+                    <!-- navigation entries -->
+                    <li class="nav-item ms-0 ms-lg-3 mt-2 mt-lg-0">
+                        <a class="nav-link ps-2" href="/human-omics-data-sharing-field-guide/index">Home</a>
+                    </li>
+                    <li class="nav-item ms-0 ms-lg-3 mt-2 mt-lg-0">
+                        <a class="nav-link ps-2" href="/human-omics-data-sharing-field-guide/about">About</a>
+                    </li><li class="nav-item ms-0 ms-lg-3 mt-2 mt-lg-0 nav-break bg-dark opacity-25"></li>
+                    <li class="nav-item ms-0 ms-lg-3 mt-2 mt-lg-0">
+                        <a class="nav-link ps-2 d-flex align-items-center" href="https://github.com/mshadbolt/human-omics-data-sharing-field-guide"><i class="fa-brands fa-github me-2"></i>GitHub</a>
+                    </li>
+                    <!--start search-->
+                    <li class="nav-item ms-0 ms-lg-3 my-2 my-lg-0">
+                        <div class="position-relative">
+                            <form role="search" class="input-group">
+                                <span class="input-group-text" id="search-label"><i class="fa-solid fa-magnifying-glass"></i></span><input type="search" id="search-input" class="search-input form-control" tabindex="0" placeholder="Search Human 'Omics Data Sharing Field Guide" aria-label="Search Human 'Omics Data Sharing Field Guide" autocomplete="off">
+                            </form>
+                            <div id="search-results" class="search-results"></div>
+                        </div>
+                    </li>
+                    <!--end search-->
+                </ul>
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+</header>
+
+    <!-- Page Content -->
+    <div class="container min-vh-100">
+        <!-- Content Row -->
+        <div class="row gx-0 gx-lg-5">
+            <!-- Sidebar Column -->
+            <div class="col-lg-3">
+                <button class="btn text-start d-lg-none collapsed sidebar-collapse w-100 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#side-nav" aria-controls="side-nav" aria-expanded="true" aria-label="Toggle navigation">
+    Main menu <i title="navbar-toggler" class="fa-solid fa-bars ms-2"></i>
+</button>
+<nav class="collapse" id="side-nav" aria-label="Side navigation">
+    <a class="btn hover-primary text-start d-block mb-1 sidebar-title" href="/human-omics-data-sharing-field-guide/index">Main </a>
+    <ul class="list-unstyled mb-4 mb-lg-0">
+        <li>    
+            <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/data_standards">Data Standards</a>
+            <ul class="list-unstyled">
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/ga4gh">GA4GH</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/fhir">FHIR</a>
+                </li>
+            </ul>
+        </li>
+        <li>    
+            <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/legal_ethical">Legal and Ethical Considerations</a>
+            <ul class="list-unstyled">
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/australian_legal">Australian Legal Landscape</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/national_statement_ethical_conduct">National Statement for Ethical Conduct in Human Research</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/consent">Consent</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/privacy_act">The Privacy Act 1988</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/hrecs">Human Research Ethics Committees(HRECs)</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/gdpr">GDPR</a>
+                </li>
+            </ul>
+        </li>
+        <li>    
+            <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/major_genome_projects">Major Genome Projects</a>
+        </li>
+        <li>    
+            <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/support_agencies">Support Agencies</a>
+        </li>
+        <li>    
+            <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/data_repositories">Data repositories</a>
+            <ul class="list-unstyled">
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/ega">EGA</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/dbgap">dbGAP</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/jga">JGA</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/gsa_human">GSA-Human</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/agdr">Australian Genomics Data repository</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/arrayexpress">ArrayExpress</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/expression_atlas">Expression Atlas</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/geo">Gene Expression Omnibus</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/biosample">BioSample</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/biostudies">BioStudies</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/bioproject">BioProject</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/hca">Human Cell Atlas</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/omicsdi">Omics Discovery Index</a>
+                </li>
+            </ul>
+        </li>
+        <li class="active">    
+            <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/other_repositories">Other repositories</a>
+        </li>
+    </ul>
+    <script>$("li.active").parents('li').toggleClass("active parent");</script>
+</nav>
+
+            </div>
+            <!-- Content Column -->
+            <div class="col-lg-9">
+                <main id="main" class="mb-5">
+    <h1>Other repositories
+    
+<div id="edit-me" class="btn-group">
+    <a role="button" data-bs-toggle="tooltip" title="Propose changes to this page on GitHub"  href="https://github.com/mshadbolt/human-omics-data-sharing-field-guide/blob/main/pages/other_repositories.md" class="btn btn-sm hover-primary text-primary"><i class="fa-solid fa-pencil-alt"></i></a>
+    <a role="button" data-bs-toggle="tooltip" title="Report an issue" href="https://github.com/mshadbolt/human-omics-data-sharing-field-guide/issues/new?title=Issue+on+page%3A+Other+repositories&amp;body=I+would+like+to+report+an+issue+on+the+Other+repositories+page+at+%60%2Fother_repositories%60.+Description+of+the+issue%3A" class="btn btn-sm hover-primary text-primary"><i class="fa-solid fa-exclamation"></i></a>
+</div>
+
+    </h1><script>
+  $(document).ready(function () {
+    $('#toc').toc({ minimumHeaders: 2, listType: 'ul', noBackToTopLinks: true, showSpeed: 0, headers: 'h2, h3' , title: '', classes:{toc:'p-3 rounded my-4'} });
+  });
+</script>
+<div class="col-12 col-sm-7 col-xl-5">
+  <div id="toc"></div>
+</div>
+
+    <h2 id="generalist-repositories">Generalist repositories</h2>
+
+<p>Many repositories exist to support sharing of data that may not fit into one of the specialist repositories. See below for some commonly used options that may suit your needs.</p>
+
+<ul>
+  <li><a href="https://figshare.com/">figshare</a> - general purpose repository for papers, data and non-traditional research outputs. May be available through your institution or linked to particular publishing requirements</li>
+  <li><a href="https://zenodo.org/">zenodo</a> - general purpose repository for documents and research artefacts, mints a doi, indexed by OpenAIRE and can link works to your ORCID</li>
+  <li>
+    <p><a href="https://sharing.nih.gov/data-management-and-sharing-policy/sharing-scientific-data/generalist-repositories">NIH curated list of general data repositories</a></p>
+  </li>
+  <li><a href="https://www.re3data.org/">Registry of Research Data Repositories</a></li>
+</ul>
+
+<h2 id="toolworkflow-repositories">Tool/workflow repositories</h2>
+
+<h3 id="toolfinder">ToolFinder</h3>
+
+<p><a href="https://australianbiocommons.github.io/2_tools.html">ToolFinder</a> is a service that lists bioinformatics tools and where they are already installed on Australian Computational Infrastructure, such as Galaxy, NCI and Pawsey. Tools can be queried, sorted and filtered and publications and links to documentation are provided where available. Tools are also curated with EDAM ontologies and cross-referenced to ELIXIR’s <a href="https://bio.tools/">bio.tools</a> repository.</p>
+
+<h3 id="workflowfinder">WorkflowFinder</h3>
+
+<p><a href="https://australianbiocommons.github.io/2_1_workflows.html">WorkflowFinder</a> is a service that lists workflows that have been submitted to WorkflowHub by Australian BioCommons partners. Workflows are curated with EDAM ontologies, tags and links out to documentation. Where available on Galaxy there is a link to open the workflow.</p>
+
+<h3 id="scrna-tools">scRNA-tools</h3>
+
+<p><a href="https://www.scrna-tools.org/">scRNA-tools</a> is a registry for software to analysis single-cell RNA-seq data <a href="https://www.zotero.org/google-docs/?v3UOD4">(Zappia, Phipson, and Oshlack 2018)</a>. There are over 1300 tools in over 30 categories that have been added to date. Users can <a href="https://www.scrna-tools.org/submit">nominate new tools</a> to be added through a webform. <a href="https://www.scrna-tools.org/analysis">Stats</a> on the tools are presented and tools can be queried and sorted in a number of different ways, such as by the number of citations or how recently it was updated.</p>
+
+<h3 id="workflowhub">WorkflowHub</h3>
+
+<p>WorkflowHub is a registry run by ELIXIR to describe, share and publish scientific computational workflows. Each entry links out to where a workflow has been stored, such as GitHub. Users can also add documentation, tags and attributions.</p>
+
+<h3 id="biotools">Bio.tools</h3>
+
+<p><a href="https://bio.tools/">Bio.tools</a> is an ELIXIR resource that provides a searchable interface for scientific and technical information about bioinformatics tools, databases and services. Tools can be <a href="https://biotools.readthedocs.io/en/latest/quickstart_guide.html">submitted</a> for inclusion by the developer or by other community members. Tools are given unique identifiers and curated with EDAM ontologies within the <a href="https://biotoolsschema.readthedocs.io/en/latest/">biotoolsSchema</a>. The registry is also <a href="https://biotools.readthedocs.io/en/latest/api_usage_guide.html">queryable via API</a>, allowing other tools to be built on top of it. Entries for each tool link out to where the tool can be downloaded, e.g. GitHub.</p>
+
+<h3 id="biocode">BioCode</h3>
+
+<p><a href="https://ngdc.cncb.ac.cn/biocode">BioCode</a> is a registry run by the CNCB-NGDC to archive Bioinformatics software tools. It stores the software within its own database and can thus track the number of downloads and provides summary statistics. Registered users are also able to rate code for usability, efficiency and reliability. Publications can also be linked to the registered code.</p>
+
+<h2 id="protocol-repositories">Protocol repositories</h2>
+
+<p>The need to share protocols is an emerging need to ensure reproducibility of scientific experiments. There are several journals and repositories that enable researchers to share their protocols in an open manner. See below for more details.</p>
+
+<h3 id="protocol-repositories-1">Protocol Repositories</h3>
+
+<ul>
+  <li><a href="https://protocolexchange.researchsquare.com/">Protocol exchange</a> - open repository for sharing scientific research protocols. Protocols are posted directly on the Protocol Exchange by authors and are made freely available to the scientific community for use and comment. Protocols are released under a <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a> license.</li>
+  <li><a href="https://www.protocols.io/">protocols.io</a> - platform to publish and develop protocols as well as give and receive feedback. Free for public sharing of protocols, private use requires a subscription. Public protocols are released under a <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a> license.</li>
+  <li><a href="https://bio-protocol.org/exchange">bio-protocol exchange</a> - platform to share protocols and post pre-prints before publication as well as ask questions of other scientists.</li>
+</ul>
+
+<h3 id="protocol-journals">Protocol journals</h3>
+
+<ul>
+  <li>
+    <p><a href="https://www.researchprotocols.org/">JMIR Research Protocols</a> - peer-reviewed journal that publishes openly accessible research ideas and grant proposals, study and trial protocols, reports of ongoing research, current methods and approaches in all areas of medical and health research.</p>
+  </li>
+  <li>
+    <p><a href="https://www.mdpi.com/journal/mps">Methods and Protocols</a> - an international, peer-reviewed, open access journal aiming to establish and describe new experimental techniques in the biological and medical sciences, published bimonthly online by MDPI.</p>
+  </li>
+  <li>
+    <p><a href="https://www.nature.com/nprot/">Nature protocols</a> - Nature Protocols publishes secondary research articles - predominantly Protocols (including Protocol Updates and Protocol Extensions), but also techniques-related Reviews, Perspectives, Correspondences, Matters Arising, Commentaries, and Consensus Statements - all of which are based on published primary research papers. We cover new techniques and technologies, as well as established methods, used in all fields of the biological, chemical and clinical sciences. Articles are commissioned by the editors. Authors are welcome to submit suggestions for articles as Presubmission Enquiries, which may then be formally commissioned by the editors.</p>
+  </li>
+  <li>
+    <p><a href="https://currentprotocols.onlinelibrary.wiley.com/">Current Protocols</a> - The aim of Current Protocols is to provide the clearest, most detailed, and reliable step-by-step instructions for all protocols relevant to a given scientific subject area. Protocols are commissioned by the editors and have been used to generate results from previous publications.</p>
+  </li>
+  <li>
+    <p><a href="https://www.cell.com/star-protocols/home">STAR protocols</a> - STAR (Structured Transparent Accessible Reproducible) Protocols is an open-access peer-reviewed protocol journal from Cell Press that publishes step-by-step experimental and computational protocols from all areas of life, health, earth, and physical sciences. The primary criteria for publication in STAR Protocols are usability and reproducibility.</p>
+  </li>
+  <li>
+    <p><a href="https://bio-protocol.org/default.aspx">bio-protocol</a> - an online peer-reviewed protocol journal curating and hosting high quality, free access protocols across the life sciences. Protocols are related to published journal articles</p>
+  </li>
+</ul>
+
+    
+    
+
+    
+
+    
+<span class="d-block h2-like fs-2">Contributors</span>
+<div class="p-4 rounded mt-4 page-contributors">
+    <a tabindex="0" role="button" class="btn btn-sm contributor-link hover-primary m-1 position-relative" data-bs-html="true" data-bs-trigger="focus" data-bs-container="body" data-bs-template='<div class="popover shadow border-0 contributor-cards" role="tooltip"><div class="popover-body p-0"></div></div>' data-bs-toggle="popover" data-bs-placement="top" data-bs-content='
+    <div class="card">
+        <div class="position-relative d-flex justify-content-center">
+          <img src="https://avatars.githubusercontent.com/mshadbolt" class="card-img-top p-3 rounded-circle contributor-img" alt="Marion Shadbolt">
+          <span class="badge position-absolute top-0 end-0">Editor</span>
+        </div>
+        <div class="card-body text-center py-0">
+          <p class="card-title">Marion Shadbolt</p>
+          <p class="card-affiliation">Australian BioCommons / University of Melbourne</p>
+        </div>
+        <div class="card-footer">
+          <div class="d-flex justify-content-center">
+            <div class="mx-1"><a class="btn bg-white text-primary hover-primary rounded-circle social-icons p-0" href="https://github.com/mshadbolt"><i class="fa-brands fa-github"></i></a></div>
+            <div class="mx-1"><a class="btn bg-white text-primary hover-primary rounded-circle social-icons p-0" href="mailto:marion@biocommons.org.au"><i class="fa-solid fa-envelope"></i></a></div>
+            <div class="mx-1"><a class="btn bg-white text-primary hover-primary rounded-circle social-icons p-0" href="https://orcid.org/0000-0001-7505-5418"><i class="fa-brands fa-orcid"></i></a></div>
+          </div>
+        </div>
+      </div>'>
+        <div class="d-flex align-items-center">
+            <div class="flex-shrink-0">
+                <img class="img-fluid rounded-circle contributor-img-sm" src="https://avatars.githubusercontent.com/mshadbolt" alt="Avatar of the contributor Marion Shadbolt">
+            </div>
+            <div class="flex-grow-1 ms-2">
+                Marion Shadbolt
+            </div>
+        </div>
+    </a>
+</div>
+
+</main>
+
+
+            </div>
+        </div>
+    </div>
+    <button id="back-to-top" class="btn btn-primary" type="button" aria-hidden="true" onclick="topFunction()">
+        <i class="fa-solid fa-arrow-up"></i><span class="ms-2 d-none d-sm-inline">Back to top</span>
+    </button>
+    <footer id="footer">
+    <div class="container py-1 py-4">
+        <div class="row g-4 d-flex justify-content-between">
+            <div class="col-lg-2 col-sm-6 d-flex justify-content-center">
+                <img class="my-auto" width="88px" src="/human-omics-data-sharing-field-guide/assets/img/main_logo.png" alt="Australian BioCommons Logo" />
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <ul class="mb-0">
+                    <li><a href="/human-omics-data-sharing-field-guide/">Home</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="text-center pt-4 mb-0">
+                <p>Icons used on this page from <a href="https://thenounproject.com/">The Noun Project</a> see <a href="/acknowledgements">Acknowledgements</a> for more info.</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="copyright text-center p-4">
+        <p>The content of this website is licensed under <a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="Creative Commons License" /></a>. The <a href="https://www.biocommons.org.au/">Australian BioCommons</a> is supported by <a href="https://www.bioplatforms.com/">Bioplatforms Australia</a>. Bioplatforms Australia is enabled by <a href="https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris">NCRIS</a>.  <a href="https://www.biocommons.org.au/privacy">Privacy</a>. <a href="https://www.biocommons.org.au/cookies">Cookies</a></p>
+
+    </div>
+</footer>
+
+    
+
+</body>
+</html>

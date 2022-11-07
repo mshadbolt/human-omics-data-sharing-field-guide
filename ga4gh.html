@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Guide to all things human 'omics data sharing in Australia.">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="Human 'Omics Data Sharing Field Guide" />
+    <meta property="og:description" content="Guide to all things human 'omics data sharing in Australia." />
+    <meta property="og:image" content="//mshadbolt.github.io/human-omics-data-sharing-field-guide/assets/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Human 'Omics Data Sharing Field Guide">
+    <meta name="msapplication-TileColor" content="#">
+    <meta name="theme-color" content="#">
+    <title>Data standards: GA4GH | Human 'Omics Data Sharing Field Guide</title>
+    <!-- Syntax highlighting  -->
+    <link rel="stylesheet" href="/human-omics-data-sharing-field-guide/assets/css/syntax.css">
+    <!-- Country flags  -->
+    <link rel="stylesheet" href="/human-omics-data-sharing-field-guide/assets/css/flag-icon.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="/human-omics-data-sharing-field-guide/assets/css/all.min.css">
+    <!-- Main css file -->
+    <link rel="stylesheet" href="/human-omics-data-sharing-field-guide/assets/css/main.css">
+    <!-- Main font(s) -->
+    <!-- JavaScript  -->
+    <script src="/human-omics-data-sharing-field-guide/assets/js/jquery.min.js"></script>
+    <script src="/human-omics-data-sharing-field-guide/assets/js/lunr.min.js"></script>
+    <script src="/human-omics-data-sharing-field-guide/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/human-omics-data-sharing-field-guide/assets/js/anchor.min.js"></script>
+    <script src="/human-omics-data-sharing-field-guide/assets/js/toc.js"></script>
+    <script src="/human-omics-data-sharing-field-guide/assets/js/jquery.navgoco.js"></script>
+    <script src="/human-omics-data-sharing-field-guide/assets/js/main.js"></script>
+    <script src="/human-omics-data-sharing-field-guide/assets/js/search.js"></script>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/human-omics-data-sharing-field-guide/assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/human-omics-data-sharing-field-guide/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/human-omics-data-sharing-field-guide/assets/img/favicon-16x16.png">
+    <link rel="manifest" href="/human-omics-data-sharing-field-guide/assets/img/site.webmanifest">
+    <link rel="mask-icon" href="/human-omics-data-sharing-field-guide/assets/img/safari-pinned-tab.svg" color="#">
+    <link rel="shortcut icon" href="/human-omics-data-sharing-field-guide/assets/img/favicon.ico">
+    <!-- Schema.org metadata -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Human 'Omics Data Sharing Field Guide",
+        "url": "https://mshadbolt.github.io",
+        "about": "Guide to all things human 'omics data sharing in Australia.",
+        "author": [
+            {
+                "@type": "Person",
+                "@id": "https://orcid.org/0000-0001-7505-5418",
+                "mainEntityOfPage": "https://orcid.org/0000-0001-7505-5418",
+                "affiliation": {
+                    "@type": "Organization",
+                    "name": "Australian BioCommons / University of Melbourne"
+                },
+                "email": "marion@biocommons.org.au",
+                "url": "https://github.com/mshadbolt",
+                "image": "https://avatars.githubusercontent.com/mshadbolt",
+                "jobTitle": "editor",
+                "name": "Marion Shadbolt"
+            }
+        ]
+    }
+</script>
+
+</head>
+
+<body>
+    <!-- Navigation -->
+<header>
+    <a class="visually-hidden-focusable" href='#main'>Skip to content</a>
+    <a class="visually-hidden-focusable" href='#footer'>Skip to footer</a>
+    <nav class="navbar navbar-light navbar-expand-lg mb-3 mb-lg-5">
+        <div class="container">
+            <a class="navbar-brand" href="/human-omics-data-sharing-field-guide/"><img class="me-3 img-fluid" alt="Human 'Omics Data Sharing Field Guide logo" src="/human-omics-data-sharing-field-guide/assets/img/main_logo.svg"><span class="me-0 me-lg-3">Human 'Omics Data Sharing Field Guide</span></a>
+            <button class="navbar-toggler text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <i title="navbar-toggler" class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                <ul class="navbar-nav">
+                    <!-- navigation entries -->
+                    <li class="nav-item ms-0 ms-lg-3 mt-2 mt-lg-0">
+                        <a class="nav-link ps-2" href="/human-omics-data-sharing-field-guide/index">Home</a>
+                    </li>
+                    <li class="nav-item ms-0 ms-lg-3 mt-2 mt-lg-0">
+                        <a class="nav-link ps-2" href="/human-omics-data-sharing-field-guide/about">About</a>
+                    </li><li class="nav-item ms-0 ms-lg-3 mt-2 mt-lg-0 nav-break bg-dark opacity-25"></li>
+                    <li class="nav-item ms-0 ms-lg-3 mt-2 mt-lg-0">
+                        <a class="nav-link ps-2 d-flex align-items-center" href="https://github.com/mshadbolt/human-omics-data-sharing-field-guide"><i class="fa-brands fa-github me-2"></i>GitHub</a>
+                    </li>
+                    <!--start search-->
+                    <li class="nav-item ms-0 ms-lg-3 my-2 my-lg-0">
+                        <div class="position-relative">
+                            <form role="search" class="input-group">
+                                <span class="input-group-text" id="search-label"><i class="fa-solid fa-magnifying-glass"></i></span><input type="search" id="search-input" class="search-input form-control" tabindex="0" placeholder="Search Human 'Omics Data Sharing Field Guide" aria-label="Search Human 'Omics Data Sharing Field Guide" autocomplete="off">
+                            </form>
+                            <div id="search-results" class="search-results"></div>
+                        </div>
+                    </li>
+                    <!--end search-->
+                </ul>
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+</header>
+
+    <!-- Page Content -->
+    <div class="container min-vh-100">
+        <!-- Content Row -->
+        <div class="row gx-0 gx-lg-5">
+            <!-- Sidebar Column -->
+            <div class="col-lg-3">
+                <button class="btn text-start d-lg-none collapsed sidebar-collapse w-100 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#side-nav" aria-controls="side-nav" aria-expanded="true" aria-label="Toggle navigation">
+    Main menu <i title="navbar-toggler" class="fa-solid fa-bars ms-2"></i>
+</button>
+<nav class="collapse" id="side-nav" aria-label="Side navigation">
+    <a class="btn hover-primary text-start d-block mb-1 sidebar-title" href="/human-omics-data-sharing-field-guide/index">Main </a>
+    <ul class="list-unstyled mb-4 mb-lg-0">
+        <li>    
+            <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/data_standards">Data Standards</a>
+            <ul class="list-unstyled">
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/ga4gh">GA4GH</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/fhir">FHIR</a>
+                </li>
+            </ul>
+        </li>
+        <li>    
+            <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/legal_ethical">Legal and Ethical Considerations</a>
+            <ul class="list-unstyled">
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/australian_legal">Australian Legal Landscape</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/national_statement_ethical_conduct">National Statement for Ethical Conduct in Human Research</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/consent">Consent</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/privacy_act">The Privacy Act 1988</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/hrecs">Human Research Ethics Committees(HRECs)</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/gdpr">GDPR</a>
+                </li>
+            </ul>
+        </li>
+        <li>    
+            <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/major_genome_projects">Major Genome Projects</a>
+        </li>
+        <li>    
+            <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/support_agencies">Support Agencies</a>
+        </li>
+        <li>    
+            <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/data_repositories">Data repositories</a>
+            <ul class="list-unstyled">
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/ega">EGA</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/dbgap">dbGAP</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/jga">JGA</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/gsa_human">GSA-Human</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/agdr">Australian Genomics Data repository</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/arrayexpress">ArrayExpress</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/expression_atlas">Expression Atlas</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/geo">Gene Expression Omnibus</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/biosample">BioSample</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/biostudies">BioStudies</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/bioproject">BioProject</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/hca">Human Cell Atlas</a>
+                </li>
+                <li>    
+                    <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/omicsdi">Omics Discovery Index</a>
+                </li>
+            </ul>
+        </li>
+        <li>    
+            <a class="btn hover-primary text-start d-block mb-1" href="/human-omics-data-sharing-field-guide/other_repositories">Other repositories</a>
+        </li>
+    </ul>
+    <script>$("li.active").parents('li').toggleClass("active parent");</script>
+</nav>
+
+            </div>
+            <!-- Content Column -->
+            <div class="col-lg-9">
+                <main id="main" class="mb-5">
+    <h1 class="has-subtitle"><span class="d-block text-secondary fs-4 ff-body">Data standards</span><span class="visually-hidden">:</span> GA4GH
+    
+<div id="edit-me" class="btn-group">
+    <a role="button" data-bs-toggle="tooltip" title="Propose changes to this page on GitHub"  href="https://github.com/mshadbolt/human-omics-data-sharing-field-guide/blob/main/pages/data_standards/ga4gh.md" class="btn btn-sm hover-primary text-primary"><i class="fa-solid fa-pencil-alt"></i></a>
+    <a role="button" data-bs-toggle="tooltip" title="Report an issue" href="https://github.com/mshadbolt/human-omics-data-sharing-field-guide/issues/new?title=Issue+on+page%3A+GA4GH&amp;body=I+would+like+to+report+an+issue+on+the+GA4GH+page+at+%60%2Fga4gh%60.+Description+of+the+issue%3A" class="btn btn-sm hover-primary text-primary"><i class="fa-solid fa-exclamation"></i></a>
+</div>
+
+    </h1><script>
+  $(document).ready(function () {
+    $('#toc').toc({ minimumHeaders: 2, listType: 'ul', noBackToTopLinks: true, showSpeed: 0, headers: 'h2, h3' , title: '', classes:{toc:'p-3 rounded my-4'} });
+  });
+</script>
+<div class="col-12 col-sm-7 col-xl-5">
+  <div id="toc"></div>
+</div>
+
+    <p>An overview of selected GA4GH data standards, see <a href="https://www.ga4gh.org/how-we-work/workstreams/">GA4GH website</a> for all standards.</p>
+
+<script src="https://kit.fontawesome.com/46236ff899.js" crossorigin="anonymous"></script>
+
+<div class="table-responsive mt-4 mb-5">
+  <table>
+    <thead>
+      <tr>
+        <th>Standard
+        </th>
+        <th>Description
+        </th>
+        <th>Workstream
+        </th>
+        <th>version / status
+        </th>
+        <th>docs
+        </th>
+        <th>github
+        </th>
+        <th>publication
+        </th>
+        <th>other resources
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Phenopackets
+        </td>
+        <td>Define and share individual characteristics, demographics and phenotypes in a standard format
+        </td>
+        <td><a href="https://ga4gh-cp.github.io/">Clin/Pheno</a>
+        </td>
+        <td>2.0.0
+        </td>
+        <td><a href="https://phenopacket-schema.readthedocs.io/en/latest/"><i class="fa-solid fa-book fa-2x"></i></a>
+        </td>
+        <td><a href="https://github.com/phenopackets/phenopacket-schema"><i class="fa-brands fa-github fa-2x"></i></a>
+        </td>
+        <td><a href="https://www.nature.com/articles/s41587-022-01357-4"><i class="fa-regular fa-file-lines"></i> Jacobsen et al. 2022</a><br />
+            <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/ggn2.202200016"> <i class="fa-regular fa-file-lines"></i> Ladewig et al. 2022</a>
+        </td>
+        <td><a href="https://www.iso.org/standard/79991.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> ISO </a>
+        </td>
+      </tr>
+      <tr>
+        <td>Beacon
+        </td>
+        <td>Query across cohort, individual and variant metadata
+        </td>
+        <td><a href="https://ga4gh-discovery.github.io/">Discovery</a>
+        </td>
+        <td>2.0.0
+        </td>
+        <td><a href="http://docs.genomebeacons.org/"><i class="fa-solid fa-book fa-2x"></i></a>
+        </td>
+        <td><a href="https://github.com/ga4gh-beacon/beacon-v2"><i class="fa-brands fa-github fa-2x"></i></a>
+        </td>
+        <td><a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/humu.24369"> <i class="fa-regular fa-file-lines"></i> Rambla et al. 2022</a> <br />
+            <a href="https://doi.org/10.1093/bioinformatics/btac568"><i class="fa-regular fa-file-lines"></i> Rueda et al. 2022</a>
+        </td>
+        <td><a href="https://b2ri-documentation.readthedocs.io/en/latest/"> <i class="fa-solid fa-book"></i> Beacon RI</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Pedigree
+        </td>
+        <td>Characterise familial relationships
+        </td>
+        <td><a href="https://ga4gh-cp.github.io/">Clin/Pheno</a>
+        </td>
+        <td>under review
+        </td>
+        <td><a href="https://pedigree.readthedocs.io/en/latest/"><i class="fa-solid fa-book fa-2x"></i></a>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+      </tr>
+      <tr>
+        <td>VRS Variation representation 
+        </td>
+        <td>Characterise variants in a standard format.
+        </td>
+        <td><a href="https://ga4gh-gks.github.io/">Genomic Knowledge Standards</a>
+        </td>
+        <td>1.2
+        </td>
+        <td><a href="https://vrs.ga4gh.org/en/stable/"><i class="fa-solid fa-book fa-2x"></i></a>
+        </td>
+        <td><a href="https://github.com/ga4gh/vrs"><i class="fa-brands fa-github fa-2x"></i></a>
+        </td>
+        <td><a href="https://www.sciencedirect.com/science/article/pii/S2666979X21000343"><i class="fa-regular fa-file-lines"></i> Wagner et al. 2021</a>
+        </td>
+        <td><a href="https://github.com/ga4gh/vrs-python"><i class="fa-brands fa-github"></i> vrs-python</a>
+        </td>
+      </tr>
+      <tr>
+        <td>DRS Data repository service
+        </td>
+        <td>Protocol for accessing data files
+        </td>
+        <td><a href="https://github.com/ga4gh/wiki/wiki">Cloud</a>
+        </td>
+        <td>1.2.0
+        </td>
+        <td><a href="https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.0.0/docs/"><i class="fa-solid fa-book fa-2x"></i></a>
+        </td>
+        <td><a href="https://github.com/ga4gh/data-repository-service-schemas"><i class="fa-brands fa-github fa-2x"></i></a>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+      </tr>
+      <tr>
+        <td>WES Workflow Execution Service
+        </td>
+        <td>API to enable users to submit workflow requests to workflow execution systems
+        </td>
+        <td><a href="https://github.com/ga4gh/wiki/wiki">Cloud</a>
+        </td>
+        <td>1.0.1
+        </td>
+        <td><a href="https://ga4gh.github.io/workflow-execution-service-schemas/docs/"><i class="fa-solid fa-book fa-2x"></i></a>
+        </td>
+        <td> <a href="https://github.com/ga4gh/workflow-execution-service-schemas "><i class="fa-brands fa-github fa-2x"></i></a>
+        </td>
+        <td>
+        </td>
+        <td> <a href="https://github.com/ga4gh/ga4gh-starter-kit-wes"><i class="fa-brands fa-github"></i>wes starter kit</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Passports
+        </td>
+        <td>Protocol for defining tokens for data access
+        </td>
+        <td><a href="https://ga4gh-duri.github.io/">DURI</a>
+        </td>
+        <td> 1.2
+        </td>
+        <td> <a href="https://github.com/ga4gh-duri/ga4gh-duri.github.io/blob/master/researcher_ids/ga4gh_passport_v1.md"><i class="fa-solid fa-book fa-2x"></i></a>
+        </td>
+        <td>
+        </td>
+        <td> <a href="https://doi.org/10.1016/j.xgen.2021.100030"><i class="fa-regular fa-file-lines"></i> Voisin et al. 2021</a>
+        </td>
+        <td> <a href="https://github.com/ga4gh/ga4gh-starter-kit-passport-ui"><i class="fa-brands fa-github"></i> ui starter kit</a><br />
+             <a href="https://github.com/ga4gh/ga4gh-starter-kit-passport-broker"><i class="fa-brands fa-github"></i> broker starter kit</a>
+        </td>
+      </tr>
+      <tr>
+        <td>DUO: Data Use Ontology
+        </td>
+        <td>Translates consent form clause to machine readable ontology
+        </td>
+        <td><a href="https://ga4gh-duri.github.io/">DURI</a>
+        </td>
+        <td> 2021-02-23
+        </td>
+        <td><a href="https://github.com/EBISPOT/DUO"><i class="fa-solid fa-book fa-2x"></i></a>
+        </td>
+        <td><a href="https://github.com/EBISPOT/DUO"><i class="fa-brands fa-github fa-2x"></i></a>
+        </td>
+        <td><a href="https://doi.org/10.1016/j.xgen.2021.100028"><i class="fa-regular fa-file-lines"></i> Lawson et al. 2021</a>
+        </td>
+        <td><a href="https://www.ebi.ac.uk/ols/ontologies/duo"><i class="fa-solid fa-arrow-up-right-from-square"></i> OLS</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+    
+    
+
+    
+
+    
+<span class="d-block h2-like fs-2">Contributors</span>
+<div class="p-4 rounded mt-4 page-contributors">
+    <a tabindex="0" role="button" class="btn btn-sm contributor-link hover-primary m-1 position-relative" data-bs-html="true" data-bs-trigger="focus" data-bs-container="body" data-bs-template='<div class="popover shadow border-0 contributor-cards" role="tooltip"><div class="popover-body p-0"></div></div>' data-bs-toggle="popover" data-bs-placement="top" data-bs-content='
+    <div class="card">
+        <div class="position-relative d-flex justify-content-center">
+          <img src="https://avatars.githubusercontent.com/mshadbolt" class="card-img-top p-3 rounded-circle contributor-img" alt="Marion Shadbolt">
+          <span class="badge position-absolute top-0 end-0">Editor</span>
+        </div>
+        <div class="card-body text-center py-0">
+          <p class="card-title">Marion Shadbolt</p>
+          <p class="card-affiliation">Australian BioCommons / University of Melbourne</p>
+        </div>
+        <div class="card-footer">
+          <div class="d-flex justify-content-center">
+            <div class="mx-1"><a class="btn bg-white text-primary hover-primary rounded-circle social-icons p-0" href="https://github.com/mshadbolt"><i class="fa-brands fa-github"></i></a></div>
+            <div class="mx-1"><a class="btn bg-white text-primary hover-primary rounded-circle social-icons p-0" href="mailto:marion@biocommons.org.au"><i class="fa-solid fa-envelope"></i></a></div>
+            <div class="mx-1"><a class="btn bg-white text-primary hover-primary rounded-circle social-icons p-0" href="https://orcid.org/0000-0001-7505-5418"><i class="fa-brands fa-orcid"></i></a></div>
+          </div>
+        </div>
+      </div>'>
+        <div class="d-flex align-items-center">
+            <div class="flex-shrink-0">
+                <img class="img-fluid rounded-circle contributor-img-sm" src="https://avatars.githubusercontent.com/mshadbolt" alt="Avatar of the contributor Marion Shadbolt">
+            </div>
+            <div class="flex-grow-1 ms-2">
+                Marion Shadbolt
+            </div>
+        </div>
+    </a>
+</div>
+
+</main>
+
+
+            </div>
+        </div>
+    </div>
+    <button id="back-to-top" class="btn btn-primary" type="button" aria-hidden="true" onclick="topFunction()">
+        <i class="fa-solid fa-arrow-up"></i><span class="ms-2 d-none d-sm-inline">Back to top</span>
+    </button>
+    <footer id="footer">
+    <div class="container py-1 py-4">
+        <div class="row g-4 d-flex justify-content-between">
+            <div class="col-lg-2 col-sm-6 d-flex justify-content-center">
+                <img class="my-auto" width="88px" src="/human-omics-data-sharing-field-guide/assets/img/main_logo.png" alt="Australian BioCommons Logo" />
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <ul class="mb-0">
+                    <li><a href="/human-omics-data-sharing-field-guide/">Home</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="text-center pt-4 mb-0">
+                <p>Icons used on this page from <a href="https://thenounproject.com/">The Noun Project</a> see <a href="/acknowledgements">Acknowledgements</a> for more info.</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="copyright text-center p-4">
+        <p>The content of this website is licensed under <a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="Creative Commons License" /></a>. The <a href="https://www.biocommons.org.au/">Australian BioCommons</a> is supported by <a href="https://www.bioplatforms.com/">Bioplatforms Australia</a>. Bioplatforms Australia is enabled by <a href="https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris">NCRIS</a>.  <a href="https://www.biocommons.org.au/privacy">Privacy</a>. <a href="https://www.biocommons.org.au/cookies">Cookies</a></p>
+
+    </div>
+</footer>
+
+    
+
+</body>
+</html>
