@@ -24,3 +24,5 @@ The actions perform two things:
 The main reason for doing it this way is to allow the use of other Jekyll extensions that would not be allowed by the native github pages workflow. Specifically, this allows us to use the [Jekyll Scholar](https://github.com/inukshuk/jekyll-scholar) extension for the display of nicely formatted citations and reference lists. 
 
 One thing to be aware of is that version `5.16.0` of the Jekyll Scholar extension needs to be used due to the `elixir-toolkit-theme` relying on version `3.9` of Jekyll. Later versions of the Jekyll Scholar extension use Jekyll `~>4.0`. I am yet to run into any issues with using the earlier version of the extension.
+
+attempt to update to version 2
