@@ -2,9 +2,6 @@ on:
   push:
     branches:
       - main  # Here source code branch is `master`, it could be other branch
-      
-permissions:
-  id-token: write
 
 jobs:
   fetch_references:
