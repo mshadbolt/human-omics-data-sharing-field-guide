@@ -13,10 +13,10 @@ group :jekyll_plugins do
   gem "jekyll-relative-links", "~> 0.6"
   gem "jekyll-seo-tag", "~> 2.8"
   gem "jekyll-remote-theme"
-  gem 'citeproc', '~>1.0.4'
-  gem 'citeproc-ruby', '~>1.1.4'
+  gem 'citeproc'
+  gem 'citeproc-ruby'
   gem 'csl-styles'
-  gem 'jekyll-scholar', '5.16.0'
+  gem 'jekyll-scholar'
 end
 
 # gem 'jekyll', group: :jekyll_plugins
